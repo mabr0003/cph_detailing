@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+:root {
+  --primary-background-color: #f1eee7;
+  --contrast-color: #121e2d;
+  --accent-color: #c3a05b;
+}
