@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import "../css/general.css";
 ---
 
 <html lang="da">
@@ -11,7 +12,17 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Forside</a></li>
+          <li><a href="/service">Service</a></li>
+          <li><a href="/contact">Kontakt</a></li>
+          <li><a href="/about">Om os</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
     <slot />
     <footer></footer>
   </body>

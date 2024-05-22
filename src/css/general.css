@@ -17,3 +17,34 @@ img {
   --contrast-color: #121e2d;
   --accent-color: #c3a05b;
 }
+
+/*------ FONTS ------- */
+
+@font-face {
+  font-family: "latoregular";
+  src: url("/public/lato_font/lato-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "din_alternatebold";
+  src: url("/public/dinalternate_font/dinalternate-bold-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "din_alternatebold";
+}
+
+h2 {
+  font-family: "din_alternatebold";
+}
+h3 {
+  font-family: "din_alternatebold";
+}
+
+p {
+  font-family: "latoregular";
+}
