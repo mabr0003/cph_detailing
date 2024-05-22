@@ -1,0 +1,98 @@
+<main>
+        <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Hvad er dit spørgsmål?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Dette er svaret på spørgsmålet.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Hvordan fungerer denne funktion?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Funktionen fungerer ved at...</p>
+            </div>
+        </div>
+         <div class="faq-item">
+            <div class="faq-question">
+                <span>Hf</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Dette er svaret på spørgsmålet.</p>
+            </div>
+        </div>
+        
+    </div>
+    </main>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    });
+});
+
+</script>
+<style>
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .faq-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .faq-answer p {
+            margin: 10px 0;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+            line-height: 1;
+            transition: transform 0.5s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Tilpas denne værdi efter behov */
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+</style>
