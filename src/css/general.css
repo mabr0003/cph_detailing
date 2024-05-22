@@ -36,6 +36,7 @@ img {
 
 h1 {
   font-family: "din_alternatebold";
+  font-size: 5rem;
 }
 
 h2 {
@@ -47,4 +48,10 @@ h3 {
 
 p {
   font-family: "latoregular";
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "din_alternatebold";
 }

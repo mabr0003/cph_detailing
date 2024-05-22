@@ -2,4 +2,51 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Om os" />
+<MainLayout title="Om os">
+  <main>
+    <section class="hero_index">
+      <div class="hero_items">
+        <h1>HVEM ER VI?</h1>
+        <p>Opdag hvad der driver os til at levere den bedste bilplejeoplevelse</p>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .hero_index {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 100vh;
+    background-image: url("productsinhand.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    color: var(--primary-background-color);
+    background-attachment: fixed;
+  }
+  .hero_items {
+    grid-row: 2/3;
+    margin-left: 1rem;
+    align-self: end;
+    padding-bottom: 8rem;
+  }
+
+  .hero_index p {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .hero_index p {
+      display: block;
+      margin: 1rem 0;
+    }
+
+    .hero_index {
+      grid-template-columns: 2fr 1fr;
+    }
+    .hero_items {
+      grid-column: 2/3;
+    }
+  }
+</style>

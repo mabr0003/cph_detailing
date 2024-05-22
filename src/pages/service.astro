@@ -2,4 +2,69 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Service" />
+<MainLayout title="Service">
+  <main>
+    <section class="hero_index">
+      <div class="hero_items">
+        <h1>VI GØR DIN BIL SÅ GOD SOM NY!</h1>
+        <p>Hos Copenhagen Detailing tilbyder vi service i topkvalitet!</p>
+        <div class="btn cta"><a href="/contact">SE HVAD VI TILBYDER HER</a></div>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .hero_index {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 100vh;
+    background-image: url("carwheelclean.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    color: var(--primary-background-color);
+    background-attachment: fixed;
+  }
+
+  .hero_index img {
+    filter: brightness(50%);
+  }
+
+  .hero_items {
+    grid-row: 2/3;
+    margin-left: 1rem;
+  }
+
+  .hero_index p {
+    display: none;
+  }
+
+  /*---- BUTTON ----*/
+  .btn {
+    display: inline-block;
+    padding: 8px 40px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    background-color: var(--accent-color);
+  }
+  .btn a {
+    color: var(--contrast-color);
+  }
+
+  @media (min-width: 800px) {
+    .hero_index p {
+      display: block;
+      margin: 2rem 0;
+    }
+
+    .hero_index {
+      grid-template-columns: 1fr 8fr;
+    }
+
+    .hero_items {
+      grid-column: 2/3;
+    }
+  }
+</style>

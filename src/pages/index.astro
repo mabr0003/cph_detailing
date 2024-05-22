@@ -2,4 +2,117 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Copenhagen Detailing" />
+<MainLayout title="Copenhagen Detailing">
+  <main>
+    <section class="hero_index">
+      <div class="hero_items">
+        <h1>RENERE END ALDRIG FØR</h1>
+        <p>Komplet bilpleje, der beskytter og fornyer din bils udseende og værdi!</p>
+        <div class="btn_flex">
+          <div class="btn cta"><a href="/contact">KONTAKT OS OG HØR MERE</a></div>
+          <div class="btn ghost"><a href="/contact">SERVICES VI TILBYDER</a></div>
+        </div>
+      </div>
+    </section>
+    <article class="testimonials">
+      <div class="testimony">
+        <p>"Fantastisk udvendig rengøring! Bilen ser helt ny ud efter behandlingen."</p>
+        <img src="testimony.avif" alt="testimonyicon" />
+      </div>
+      <div class="testimony">
+        <p>"Rat og dashboard rengøringen gjorde en stor forskel! Det føles som om jeg kører i en helt ny bil."</p>
+        <img src="testimony.avif" alt="testimonyicon" />
+      </div>
+      <div class="testimony">
+        <p>"Interiørplejen var en game changer! Kabine lugter frisk og føles som om den er blevet løftet."</p>
+        <img src="testimony.avif" alt="testimonyicon" />
+      </div>
+    </article>
+  </main>
+</MainLayout>
+
+<style>
+  .hero_index {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 100vh;
+    background-image: url("polishing.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    color: var(--primary-background-color);
+    background-attachment: fixed;
+  }
+
+  .hero_items {
+    grid-row: 2/3;
+    margin-left: 1rem;
+  }
+
+  .hero_index p {
+    display: none;
+  }
+
+  .testimonials {
+    display: none;
+  }
+
+  /*---- BUTTON -----*/
+  .btn {
+    display: inline-block;
+    padding: 8px 40px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .cta {
+    background-color: var(--accent-color);
+  }
+  .cta a {
+    color: var(--contrast-color);
+  }
+
+  .ghost {
+    border: 2px solid var(--accent-color);
+  }
+  .ghost a {
+    color: var(--primary-background-color);
+  }
+
+  @media (min-width: 800px) {
+    .hero_index p {
+      display: block;
+      margin: 2rem 0;
+      max-width: 35ch;
+    }
+
+    .hero_index {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .hero_items {
+      grid-column: 2/3;
+      align-self: end;
+    }
+
+    .testimonials {
+      display: flex;
+      text-align: center;
+      padding: 3rem;
+      background-color: var(--contrast-color);
+    }
+    .testimonials img {
+      width: 30px;
+      align-self: center;
+      margin-top: 1rem;
+    }
+
+    .testimony {
+      display: flex;
+      flex-direction: column;
+      color: var(--primary-background-color);
+      padding: 0 2rem;
+    }
+  }
+</style>

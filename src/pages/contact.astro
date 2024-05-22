@@ -2,4 +2,44 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Kontakt" />
+<MainLayout title="Kontakt">
+  <main>
+    <section class="hero_index">
+      <div class="hero_items">
+        <h1>KONTAKT OS NU!</h1>
+        <p>Tag det første skridt mod en skinnende ren bil ved at kontakte os i dag!</p>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .hero_index {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 100vh;
+    background-image: url("licenseplate.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    color: var(--primary-background-color);
+    background-attachment: fixed;
+  }
+  .hero_items {
+    grid-row: 3/4;
+    margin-left: 1rem;
+    align-self: end;
+    padding-bottom: 8rem;
+  }
+
+  .hero_index p {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .hero_index p {
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+</style>
