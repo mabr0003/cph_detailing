@@ -1,35 +1,18 @@
-<main>
-        <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Hvad er dit spørgsmål?</span>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Dette er svaret på spørgsmålet.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Hvordan fungerer denne funktion?</span>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Funktionen fungerer ved at...</p>
-            </div>
-        </div>
-         <div class="faq-item">
-            <div class="faq-question">
-                <span>Hf</span>
-                <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Dette er svaret på spørgsmålet.</p>
-            </div>
-        </div>
+---
+const {title, dropdown} = Astro.props;
+---
         
-    </div>
-    </main>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span><p>{title}</p></span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>{dropdown}</p>
+            </div>
+        </div>
+   
+
     
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -51,14 +34,6 @@
             padding: 20px;
         }
 
-        .faq-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
 
         .faq-item {
             border-bottom: 1px solid #ccc;

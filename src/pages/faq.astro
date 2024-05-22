@@ -1,10 +1,29 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import DropDown from "../layouts/Dropdown.astro";
+import DropDown from "../components/DropDown.astro";
 ---
 
 <MainLayout title="FAQ">
+    <div class="faq-container">
+
+    <DropDown title="Sylle er bøgs?" dropdown="ja"/>
+    <DropDown title="Sylle er straight?" dropdown="nej"/>
+    <DropDown title="Sylle er bøgs?" dropdown="ja"/>
+    <DropDown title="Sylle er bøgs?" dropdown="ja"/>
+    <DropDown title="Sylle er bøgs?" dropdown="ja"/>
+
+    </div>
+   
     
 </MainLayout>
 
-
+<style>
+ .faq-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+</style>
