@@ -1,7 +1,7 @@
 ---
 const { title } = Astro.props;
 import "../css/general.css";
-import Navigation from "./Navigation.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <html lang="da">
@@ -13,25 +13,11 @@ import Navigation from "./Navigation.astro";
     <title>{title}</title>
   </head>
   <body>
-    <Navigation />
+    <header><Navigation /></header>
+
     <slot />
     <footer></footer>
   </body>
 </html>
 
-<style>
-  header {
-    position: absolute;
-    z-index: 1000;
-  }
-
-  header a {
-    color: var(--primary-background-color);
-  }
-</style>
-
-<style>
-  body {
-    background-color: black;
-  }
-</style>
+<style></style>

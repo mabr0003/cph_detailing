@@ -1,0 +1,83 @@
+---
+
+---
+
+<header class="site-header">
+  <a class="logo" href="/"><img src="logofullname.avif" alt="" /></a>
+  <nav>
+    <ul>
+      <li><a href="/service">SERVICE</a></li>
+      <li><a href="/contact">KONTAKT</a></li>
+      <li><a href="/about">OM OS</a></li>
+      <li><a href="/faq">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  /* .site-header {
+    overflow: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 1px solid #f1eee7;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 492px;
+    height: 52px;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  ul a {
+    text-decoration: none;
+    color: #ece7de;
+    font-size: 19px;
+  } */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #f1eee7;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .logo img {
+    height: 52px;
+  }
+
+  nav {
+    flex-grow: 1;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul a {
+    text-decoration: none;
+    font-size: 19px;
+    color: var(--primary-background-color);
+  }
+</style>
