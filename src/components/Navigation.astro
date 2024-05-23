@@ -3,51 +3,45 @@
 ---
 
 <header class="site-header">
-  <a class="logo" href="/"><img src="logofullname.avif" alt="" /></a>
+  <div>
+    <a class="logo" href="/"><img src="logofullname.avif" alt="" /></a>
+    <a class="logo2" href="/"><img src="logo.avif" alt="" /></a>
+  </div>
   <nav>
-    <ul>
+    <ul class="menu">
       <li><a href="/service">SERVICE</a></li>
       <li><a href="/contact">KONTAKT</a></li>
       <li><a href="/about">OM OS</a></li>
       <li><a href="/faq">FAQ</a></li>
     </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </nav>
 </header>
 
+<script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu li a");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
+</script>
+
 <style>
-  /* .site-header {
-    overflow: auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    text-decoration: none;
-    border-bottom: 1px solid #f1eee7;
-    position: absolute;
-    z-index: 1000;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .logo {
-    width: 492px;
-    height: 52px;
-  }
-
-  ul li {
-    list-style: none;
-  }
-
-  ul a {
-    text-decoration: none;
-    color: #ece7de;
-    font-size: 19px;
-  } */
   .site-header {
     display: flex;
     justify-content: space-between;
@@ -59,8 +53,13 @@
     width: 100%;
   }
 
-  .logo img {
+  .logo {
     height: 52px;
+  }
+
+  .logo2 {
+    width: 52px;
+    display: none;
   }
 
   nav {
@@ -79,5 +78,83 @@
     text-decoration: none;
     font-size: 19px;
     color: var(--primary-background-color);
+  }
+
+  /*----- BURGER MENU -----*/
+
+  .burger {
+    display: none;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-background-color);
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  @media screen and (max-width: 800px) {
+    nav ul {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .logo2 {
+      display: block;
+    }
+
+    .site-header {
+      justify-content: space-evenly;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: block;
+      background-color: var(--contrast-color);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding-right: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 101;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+      font-size: 100px;
+    }
+
+    nav.active .menu a {
+      font-size: 24px;
+    }
   }
 </style>
