@@ -18,13 +18,19 @@ import MainLayout from "../layouts/MainLayout.astro";
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     height: 100vh;
-    background-image: url("productsinhand.avif");
+    width: 100vw;
+    background-image: url("carfrontview.avif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
     color: var(--primary-background-color);
     background-attachment: fixed;
   }
+
+  .hero_index p {
+    display: none;
+  }
+
   .hero_items {
     grid-row: 2/3;
     margin-left: 1rem;
@@ -32,8 +38,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     padding-bottom: 8rem;
   }
 
-  .hero_index p {
-    display: none;
+  .hero_items h1 {
+    font-size: 4.2rem;
   }
 
   @media (min-width: 800px) {
@@ -43,10 +49,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     }
 
     .hero_index {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
     }
     .hero_items {
       grid-column: 2/3;
+      justify-items: end;
     }
   }
 </style>
