@@ -1,14 +1,14 @@
 ---
-
+const { data } = Astro.props;
 ---
 
 <div class="pakke">
-  <h2>PLATINIUM</h2>
+  <h2>{data.pakke}</h2>
   <div class="icon_bg">
     <img class="icon" src="/public/vector.svg" alt="" />
   </div>
-  <p class="pris">DKK 365,- / 1 TIME</p>
-  <div class="btn"><a href="">LÆS MERE</a></div>
+  <p class="pris"><span>{data.price}</span> / <span>{data.time}</span></p>
+  <div class="btn"><a href={`/pakker/${data.id}`}>LÆS MERE</a></div>
 </div>
 
 <style>

@@ -1,10 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import DropDown from "../components/DropDown.astro";
 import LogoBar from "../components/LogoBar.astro";
+import FaqDropDown from "../components/FaqDropDown.astro";
+
+const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/faq?order=id", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZmR2aG1jeW9hcWRvZ3ZxZ293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1Mzg2ODcsImV4cCI6MjAzMjExNDY4N30.y9HAllaBKICo_O4VFd_a5PqpeNenzQvRYlsBkHt2Iqg",
+  },
+}).then((res) => res.json());
+
+console.log(data);
 ---
 
-<MainLayout title="Om os">
+<MainLayout title="FAQ">
   <main>
     <section class="hero_index">
       <div class="hero_items">
@@ -13,6 +22,13 @@ import LogoBar from "../components/LogoBar.astro";
       </div>
     </section>
     <LogoBar />
+    <article class="faqlist">
+      {
+        data.map((question) => {
+          return <FaqDropDown data={question} />;
+        })
+      }
+    </article>
   </main>
 </MainLayout>
 

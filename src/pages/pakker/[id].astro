@@ -1,0 +1,43 @@
+---
+import SingleViewLayout from "../../layouts/SingleViewLayout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakker", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZmR2aG1jeW9hcWRvZ3ZxZ293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1Mzg2ODcsImV4cCI6MjAzMjExNDY4N30.y9HAllaBKICo_O4VFd_a5PqpeNenzQvRYlsBkHt2Iqg",
+    },
+  }).then((res) => res.json());
+
+  const newData = data.map((pakke) => {
+    return { params: { id: pakke.id }, props: { data: pakke } };
+  });
+  return newData;
+}
+
+const { data } = Astro.props;
+---
+
+<SingleViewLayout title={data.pakke}>
+  <main>
+    <section class="pakkeview">
+      <article>
+        <h1>{data.pakke}</h1>
+      </article>
+    </section>
+  </main>
+</SingleViewLayout>
+
+<style>
+  .pakkeview {
+    background-color: var(--contrast-color);
+    height: 100vh;
+    display: grid;
+  }
+
+  .pakkeview article {
+    background-color: var(--primary-background-color);
+    align-self: center;
+    padding: 5rem;
+  }
+</style>

@@ -1,14 +1,24 @@
 ---
-const { title, dropdown } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <div class="faq-item">
   <div class="faq-question">
-    <span><p>{title}</p></span>
+    <span><p>{data.service}</p></span>
     <span class="faq-toggle">+</span>
   </div>
   <div class="faq-answer">
-    <p>{dropdown}</p>
+    <p>{data.description}</p>
+    <div class="time_price">
+      <div>
+        <div class="time"><img src="timeicon.svg" alt="time" /> <p>Varighed:</p></div>
+        <p>{data.time}</p>
+      </div>
+      <div>
+        <div class="price"><img src="priceicon.svg" alt="price" /> <p>Pris:</p></div>
+        <p>{data.price}</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -26,7 +36,7 @@ const { title, dropdown } = Astro.props;
 <style>
   .faq-item {
     border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    padding: 10px 10px;
     cursor: pointer;
   }
 
@@ -53,10 +63,45 @@ const { title, dropdown } = Astro.props;
   }
 
   .faq-item.active .faq-answer {
-    max-height: 200px; /* Tilpas denne værdi efter behov */
+    max-height: 500px; /* Tilpas denne værdi efter behov */
   }
 
   .faq-item.active .faq-toggle {
     transform: rotate(45deg);
+  }
+
+  .time_price img {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    margin-right: 1rem;
+  }
+
+  .time_price > div {
+    margin-bottom: 2rem;
+  }
+
+  .time {
+    display: flex;
+  }
+
+  .price {
+    display: flex;
+  }
+
+  @media (min-width: 800px) {
+    .faq-answer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 3rem 0 3rem;
+    }
+
+    .time_price {
+      display: flex;
+    }
+
+    .time {
+      margin-right: 2rem;
+    }
   }
 </style>

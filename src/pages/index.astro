@@ -1,6 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import LogoBar from "../components/LogoBar.astro";
+import PakkeCard from "../components/PakkeCard.astro";
+
+const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakker?order=id", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZmR2aG1jeW9hcWRvZ3ZxZ293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1Mzg2ODcsImV4cCI6MjAzMjExNDY4N30.y9HAllaBKICo_O4VFd_a5PqpeNenzQvRYlsBkHt2Iqg",
+  },
+}).then((res) => res.json());
 ---
 
 <MainLayout title="Copenhagen Detailing">
@@ -29,6 +37,13 @@ import LogoBar from "../components/LogoBar.astro";
         <p>"Interiørplejen var en game changer! Kabine lugter frisk og føles som om den er blevet løftet."</p>
         <img src="testimony.avif" alt="testimonyicon" />
       </div>
+    </article>
+    <article class="pakkelist">
+      {
+        data.map((pakke) => {
+          return <PakkeCard data={pakke} />;
+        })
+      }
     </article>
   </main>
 </MainLayout>
