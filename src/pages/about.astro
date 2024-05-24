@@ -12,6 +12,13 @@ import LogoBar from "../components/LogoBar.astro";
       </div>
     </section>
     <LogoBar />
+    <section class="about_galleri galleri1"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iure fugit magnam. Consectetur tenetur ratione, reiciendis corporis quasi autem qui. Similique totam animi, et quia tenetur fugiat delectus iste. Minus!</p></section>
+    <section class="about_galleri galleri2"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iure fugit magnam. Consectetur tenetur ratione, reiciendis corporis quasi autem qui. Similique totam animi, et quia tenetur fugiat delectus iste. Minus!</p></section>
+    <section class="about_galleri galleri3"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iure fugit magnam. Consectetur tenetur ratione, reiciendis corporis quasi autem qui. Similique totam animi, et quia tenetur fugiat delectus iste. Minus!</p></section>
+    <section class="kontaktos">
+      <h2>SKAL VI TAGE OS AF DIN BIL?</h2>
+      <div class="btn cta"><a href="/contact">KONTAKT OS NU</a></div>
+    </section>
   </main>
 </MainLayout>
 
@@ -38,6 +45,42 @@ import LogoBar from "../components/LogoBar.astro";
     display: none;
   }
 
+  .about_galleri {
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    color: var(--primary-background-color);
+  }
+
+  .about_galleri p {
+    max-width: 65ch;
+    text-align: center;
+    margin: auto;
+  }
+
+  .galleri1 {
+    background-image: url("aboutback.avif");
+    background-position: 20%;
+  }
+
+  .galleri2 {
+    background-image: url("aboutwash.avif");
+    background-position: 80%;
+  }
+  .galleri3 {
+    background-image: url("aboutinterior.avif");
+    background-position: 20%;
+  }
+  .kontaktos {
+    text-align: center;
+    margin: 5rem;
+  }
+
+  .kontaktos h2 {
+    margin-bottom: 2rem;
+  }
   @media (min-width: 800px) {
     .hero_index p {
       display: block;
