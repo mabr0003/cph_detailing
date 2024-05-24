@@ -35,10 +35,10 @@
           glans.
         </p>
       </div>
-      <button>KLIK HER OG LÆS MERE</button>
+      <div class="btn cta"><a href="/contact">KLIK HER OG LÆS MERE</a></div>
     </div>
     <div>
-      <img src="" alt="img slider" />
+      <img src="Screenshot 2024-05-09 at 12.14.29.png" alt="" />
     </div>
   </div>
 </article>
@@ -79,15 +79,20 @@
       padding: 0 10px;
       margin-top: 15px;
     }
-    button {
-      margin-left: 80px;
-      border-radius: 6px;
-      background: var(--Accent, #c3a05b);
-      display: inline-flex;
-      padding: 13px 69px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+  }
+  @media (max-width: 600px) {
+    .listing {
+      display: flex;
+      margin: 2rem;
+      max-width: 70ch;
+    }
+    h1 {
+      margin-left: 30px;
+    }
+    img {
+      height: 33px;
+      width: 34px;
+      margin: 15px 30px 0 0;
     }
   }
 </style>
