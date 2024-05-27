@@ -1,8 +1,8 @@
 ---
 const { title } = Astro.props;
 import "../css/general.css";
-import Navigation from "./Navigation.astro";
-import Img_slider from "./Img_slider.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="da">
@@ -15,9 +15,8 @@ import Img_slider from "./Img_slider.astro";
   </head>
   <body>
     <Navigation />
-    <Img_slider />
     <slot />
-    <footer></footer>
+    <footer><Footer /></footer>
   </body>
 </html>
 
