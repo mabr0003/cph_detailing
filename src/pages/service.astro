@@ -21,14 +21,15 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/servi
       </div>
     </section>
     <LogoBar />
-
-    <article class="servicelist">
-      {
-        data.map((service) => {
-          return <DropDown data={service} />;
-        })
-      }
-    </article>
+    <div class="max_width">
+      <article class="servicelist">
+        {
+          data.map((service) => {
+            return <DropDown data={service} />;
+          })
+        }
+      </article>
+    </div>
   </main>
 </MainLayout>
 

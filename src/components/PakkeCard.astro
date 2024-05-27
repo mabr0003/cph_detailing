@@ -3,23 +3,37 @@ const { data } = Astro.props;
 ---
 
 <div class="pakke">
-  <h3>{data.pakke}</h3>
-  <div class="icon_bg">
-    <img class="icon" src="/vector.svg" alt="" />
-  </div>
-  <p class="pris"><span>{data.price}</span> / <span>{data.time}</span></p>
-  <div class="btn cta"><a href={`/pakker/${data.id}`}>LÆS MERE</a></div>
+  <a href={`/pakker/${data.id}`}>
+    <h3>{data.pakke}</h3>
+    <div class="icon_bg">
+      <img class="icon" src="/vector.svg" alt="" />
+    </div>
+    <p class="pris"><span>{data.price}</span> / <span>{data.time}</span></p>
+    <div class="btn cta"><a href={`/pakker/${data.id}`}>LÆS MERE</a></div>
+  </a>
 </div>
 
 <style>
   .pakke {
     background-color: var(--contrast-color);
-    color: #ffffff;
     padding: 2rem;
     border-radius: 18px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     text-align: center;
+    transition: 0.5s;
+  }
+
+  .pakke:hover {
+    scale: 102%;
+  }
+
+  .pakke:hover .cta {
+     background-color: transparent;
+    border: 1px solid var(--accent-color);
+  }
+  .pakke:hover .cta a {
+    color: var(--primary-background-color);
   }
 
   .icon_bg {
@@ -38,15 +52,18 @@ const { data } = Astro.props;
 
   .icon {
     align-items: center;
-    width: 70%;
+    width: 100px;
   }
 
   .pris {
     margin: 1rem 0;
+    color: var(--primary-background-color);
   }
 
   a {
     text-decoration: none;
     color: #000000;
   }
+
+  .pakke
 </style>

@@ -38,8 +38,10 @@ body {
   font-style: normal;
 }
 
-main {
+.max_width {
   padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 h1 {
@@ -74,18 +76,43 @@ a {
   border-radius: 4px;
   margin-right: 5px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .cta {
   background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transition: 0.5s;
 }
 .cta a {
   color: var(--contrast-color);
+  transition: 0.5s;
 }
 
 .ghost {
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transition: 0.5s;
 }
 .ghost a {
   color: var(--primary-background-color);
+  transition: 0.5s;
+}
+
+@media (min-width: 800px) {
+  .cta:hover {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+  }
+
+  .cta:hover a {
+    color: var(--primary-background-color);
+  }
+  .ghost:hover {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+
+  .ghost:hover a {
+    color: var(--contrast-color);
+  }
 }

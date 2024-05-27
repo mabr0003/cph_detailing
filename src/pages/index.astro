@@ -12,45 +12,45 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakke
 ---
 
 <MainLayout title="Copenhagen Detailing">
-  <section class="hero_index">
-    <div class="hero_items">
-      <h1>RENERE END ALDRIG FØR</h1>
-      <p>Komplet bilpleje, der beskytter og fornyer din bils udseende og værdi!</p>
-      <div class="btn_flex">
-        <div class="btn cta"><a href="/contact">KONTAKT OS OG HØR MERE</a></div>
-        <div class="btn ghost"><a href="/contact">SERVICES VI TILBYDER</a></div>
-      </div>
-    </div>
-  </section>
-  <div class="logobar"><LogoBar /></div>
-  <article class="testimonials">
-    <div class="testimony">
-      <p>"Fantastisk udvendig rengøring! Bilen ser helt ny ud efter behandlingen."</p>
-      <img src="testimony.avif" alt="testimonyicon" />
-    </div>
-    <div class="testimony">
-      <p>"Rat og dashboard rengøringen gjorde en stor forskel! Det føles som om jeg kører i en helt ny bil."</p>
-      <img src="testimony.avif" alt="testimonyicon" />
-    </div>
-    <div class="testimony">
-      <p>"Interiørplejen var en game changer! Kabine lugter frisk og føles som om den er blevet løftet."</p>
-      <img src="testimony.avif" alt="testimonyicon" />
-    </div>
-  </article>
   <main>
-    <section>
-      <div class="pakker">
-        <h2>PAKKELØSNINGER</h2>
-        <p>Vi tilbyder bilplejepakker i Bronze, Sølv, Guld og Platin. Vælg din perfekte pleje!</p>
+    <section class="hero_index">
+      <div class="hero_items">
+        <h1>RENERE END ALDRIG FØR</h1>
+        <p>Komplet bilpleje, der beskytter og fornyer din bils udseende og værdi!</p>
+        <div class="hero_cta btn cta"><a href="/contact">KONTAKT OS OG HØR MERE</a></div>
+        <div class="hero_ghost btn ghost"><a href="/contact">SERVICES VI TILBYDER</a></div>
       </div>
-      <article class="pakkelist">
-        {
-          data.map((pakke) => {
-            return <PakkeCard data={pakke} />;
-          })
-        }
-      </article>
     </section>
+    <div class="logobar"><LogoBar /></div>
+    <article class="testimonials">
+      <div class="testimony">
+        <p>"Fantastisk udvendig rengøring! Bilen ser helt ny ud efter behandlingen."</p>
+        <img src="testimony.avif" alt="testimonyicon" />
+      </div>
+      <div class="testimony">
+        <p>"Rat og dashboard rengøringen gjorde en stor forskel! Det føles som om jeg kører i en helt ny bil."</p>
+        <img src="testimony.avif" alt="testimonyicon" />
+      </div>
+      <div class="testimony">
+        <p>"Interiørplejen var en game changer! Kabine lugter frisk og føles som om den er blevet løftet."</p>
+        <img src="testimony.avif" alt="testimonyicon" />
+      </div>
+    </article>
+    <div class="max_width">
+      <section>
+        <div class="pakker">
+          <h2>PAKKELØSNINGER</h2>
+          <p>Vi tilbyder bilplejepakker i Bronze, Sølv, Guld og Platin. Vælg din perfekte pleje!</p>
+        </div>
+        <article class="pakkelist">
+          {
+            data.map((pakke) => {
+              return <PakkeCard data={pakke} />;
+            })
+          }
+        </article>
+      </section>
+    </div>
   </main>
 </MainLayout>
 
@@ -81,8 +81,13 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakke
   }
 
   .pakker {
-    max-width: 65ch;
-    margin: auto;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pakker h2 {
+    margin-bottom: 1rem;
   }
 
   .pakkelist {
@@ -99,11 +104,11 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakke
     }
 
     .hero_index {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr 2fr;
     }
 
     .hero_items {
-      grid-column: 2/3;
+      grid-column: 2/4;
       align-self: end;
     }
 
@@ -129,18 +134,11 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakke
     .logobar {
       display: none;
     }
-  }
-</style>
 
-<style>
-  .pakke_container {
-    display: flex;
-    justify-content: space-around; /* Distributes the cards evenly */
-    flex-wrap: wrap; /* Allows cards to wrap to the next line if necessary */
-    gap: 20px; /* Adds space between the cards */
-    padding: 20px;
-    background-color: #ffffff; /* Background color for the container */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .pakkelist {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-width: 1000px;
+      margin: auto;
+    }
   }
 </style>
