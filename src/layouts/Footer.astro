@@ -8,6 +8,14 @@
   </head>
   <body>
     <div class="container">
+      <div class="bil_tekst">
+        <div>
+          <img src="logo1.png" alt="" />
+        </div>
+        <div>
+          <img src="Bil-footer-blå 2.png" alt="" />
+        </div>
+      </div>
       <div class="footer_content">
         <div>
           <img src="logo.png" alt="logo" />
@@ -76,6 +84,16 @@
     box-sizing: border-box;
   }
   @media (min-width: 600px) {
+    .bil_tekst {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: -20px;
+    }
+    .bil_tekst img {
+      width: 90%;
+    }
     .container {
       position: relative;
       bottom: 0;
