@@ -1,0 +1,32 @@
+---
+
+---
+
+<div id="back_btn"><img src="/backbutton.svg" alt="back" /> <p>TILBAGE</p></div>
+
+<script>
+  const back = document.querySelector("#back_btn");
+
+  back.addEventListener("click", function () {
+    window.history.back();
+  });
+</script>
+
+<style>
+  #back_btn {
+    display: flex;
+    cursor: pointer;
+  }
+
+  #back_btn p {
+    font-size: 15px;
+    align-self: center;
+    margin-left: 0.5rem;
+  }
+
+  #back_btn img {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+  }
+</style>

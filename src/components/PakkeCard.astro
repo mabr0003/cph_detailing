@@ -3,25 +3,23 @@ const { data } = Astro.props;
 ---
 
 <div class="pakke">
-  <h2>{data.pakke}</h2>
+  <h3>{data.pakke}</h3>
   <div class="icon_bg">
-    <img class="icon" src="/public/vector.svg" alt="" />
+    <img class="icon" src="/vector.svg" alt="" />
   </div>
   <p class="pris"><span>{data.price}</span> / <span>{data.time}</span></p>
-  <div class="btn"><a href={`/pakker/${data.id}`}>LÆS MERE</a></div>
+  <div class="btn cta"><a href={`/pakker/${data.id}`}>LÆS MERE</a></div>
 </div>
 
 <style>
   .pakke {
     background-color: var(--contrast-color);
     color: #ffffff;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 18px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 12rem;
     box-sizing: border-box;
     text-align: center;
-    height: 21rem;
   }
 
   .icon_bg {
@@ -29,12 +27,12 @@ const { data } = Astro.props;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    height: 9rem;
+    padding: 4rem 1rem;
     border-radius: 18px;
     margin-top: 1rem;
   }
 
-  h2 {
+  h3 {
     color: var(--accent-color);
   }
 
@@ -44,20 +42,7 @@ const { data } = Astro.props;
   }
 
   .pris {
-    margin-top: 1rem;
-    white-space: nowrap;
-  }
-
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    text-decoration: none;
-    margin-top: 2rem;
-    background-color: var(--accent-color);
-    border-radius: 8px;
-    height: 2rem;
+    margin: 1rem 0;
   }
 
   a {

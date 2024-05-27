@@ -1,5 +1,6 @@
 ---
 import SingleViewLayout from "../../layouts/SingleViewLayout.astro";
+import BackButton from "../../components/BackButton.astro";
 
 export async function getStaticPaths() {
   const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakker", {
@@ -22,7 +23,22 @@ const { data } = Astro.props;
   <main>
     <section class="pakkeview">
       <article>
-        <h1>{data.pakke}</h1>
+        <BackButton />
+        <h1>{data.pakke}pakken</h1>
+        <div>
+          <h2>HVAD FÅR DU MED?</h2>
+          <p>Med {data.pakke}pakken sørger vi for {data.service}</p>
+          <div class="time_price">
+            <div>
+              <div class="time"><img src="/timeicon.svg" alt="time" /> <div><p>Varighed:</p> <p>{data.time}</p></div></div>
+            </div>
+            <div>
+              <div class="price"><img src="/priceicon.svg" alt="price" /> <div><p>Pris:</p> <p>{data.price}</p></div></div>
+            </div>
+          </div>
+          <div class="kontakt btn cta"><a href="/contact">KONTAKT</a></div>
+        </div>
+        <img src="/pakkeimg.avif" alt="pakke" />
       </article>
     </section>
   </main>
@@ -31,13 +47,83 @@ const { data } = Astro.props;
 <style>
   .pakkeview {
     background-color: var(--contrast-color);
-    height: 100vh;
-    display: grid;
+    padding: 1.5rem;
+  }
+
+  .pakkeview h1 {
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
   }
 
   .pakkeview article {
     background-color: var(--primary-background-color);
-    align-self: center;
-    padding: 5rem;
+    padding: 1rem;
+    margin-top: 6rem;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .pakkeview img {
+    border-radius: 15px;
+  }
+
+  .time_price img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+  }
+
+  .time_price {
+    padding: 3rem 0;
+  }
+
+  .time_price > div {
+    margin-bottom: 2rem;
+  }
+
+  .time {
+    display: flex;
+  }
+
+  .price {
+    display: flex;
+  }
+
+  .kontakt {
+    margin-bottom: 2rem;
+  }
+  @media (min-width: 800px) {
+    .time_price {
+      display: flex;
+    }
+
+    .time {
+      margin-right: 2rem;
+    }
+
+    .pakkeview article {
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr;
+      padding: 0 5rem 5rem;
+      gap: 20px;
+    }
+    .pakkeview article img {
+      grid-column: 2/4;
+    }
+    .pakkeview > article > div {
+      grid-column: 1/2;
+    }
+
+    .pakkeview h1 {
+      font-size: 3rem;
+      justify-self: center;
+    }
   }
 </style>
