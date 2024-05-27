@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="footer_content">
+        <div>
+          <img src="logo.png" alt="logo" />
+        </div>
+        <div class="footer_main">
+          <div id="first" class="links">
+            <h2 class="titel">Kontakt</h2>
+            <p>Mail: CopenhagenDetailing@gmail.com</p>
+            <p>Telefon: +45 25 55 66 04</p>
+            <p>Adresse: Toldbodgade 39, 1253 København K</p>
+          </div>
+          <div id="links_2" class="links">
+            <h2 class="titel">Følg os</h2>
+            <ul>
+              <li>
+                <img class="icon" src="Vector.png" alt="" /><a href=""
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <img class="icon" src="Vector-1.png" alt="" /><a href=""
+                  >TikTok</a
+                >
+              </li>
+              <li>
+                <img class="icon" src="Vector-2.png" alt="" /><a href=""
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2 class="titel">Åbningstider:</h2>
+            <p>Mandag til Fredag:</p>
+            <p>kl. 08 - 17</p>
+            <p>Weekend: efter aftale</p>
+            <p>Helligdage: efter aftale</p>
+          </div>
+        </div>
+        <div class="seperator"></div>
+
+        <div class="footer_buttom">
+          <div id="first_buttom">
+            <p>© COPENHAGEN DETAILING. All rights reserved.</p>
+          </div>
+
+          <div>
+            <p class="link_decor">Privacy Policy</p>
+          </div>
+          <div>
+            <p class="link_decor">Terms of Service</p>
+          </div>
+          <div>
+            <p class="link_decor">Cookies Settings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @media (min-width: 600px) {
+    .container {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+    .footer_content {
+      background-color: #121e2d;
+      padding: 40px 40px 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .footer_main {
+      margin: 10px 20px;
+      display: flex;
+      width: 100%;
+      justify-content: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 0;
+    }
+
+    .footer_main h2 {
+      color: #f3eee7;
+    }
+    .footer_main p {
+      color: #f3eee7;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      margin: 40px 20px;
+    }
+    #links_2 {
+      margin-right: 13%;
+    }
+    a {
+      text-decoration: none;
+      color: #f3eee7;
+    }
+    #first {
+      margin-right: auto;
+    }
+    .footer_buttom {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      color: #f3eee7;
+      margin-left: 0;
+      width: 100%;
+      justify-content: space-between;
+    }
+    #first_buttom {
+      margin-right: auto;
+      margin-left: 20px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .titel {
+      font-size: 18px;
+    }
+    .link_decor {
+      margin-left: 25px;
+    }
+    img {
+      margin-left: 20px;
+    }
+    li {
+      list-style-type: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .icon {
+      height: 17px;
+      width: 17px;
+      margin-right: 10px;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+    .seperator {
+      border-bottom: 0.5px solid #c3a05b;
+      margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 600px) {
+    .container {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+    .footer_content {
+      background-color: #121e2d;
+      padding: 40px 40px 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .footer_main {
+      display: flex;
+      width: 100%;
+      justify-content: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 0;
+    }
+
+    .footer_main h2 {
+      color: #f3eee7;
+    }
+    .footer_main p {
+      color: #f3eee7;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      margin: 40px 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #f3eee7;
+    }
+    #first {
+      margin-right: auto;
+    }
+    .footer_buttom {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      color: #f3eee7;
+      margin-left: 0;
+      width: 100%;
+    }
+    #first_buttom {
+      margin-right: auto;
+      margin-left: 20px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .titel {
+      font-size: 18px;
+    }
+    .link_decor {
+      margin-left: 25px;
+    }
+    img {
+      margin-left: 20px;
+    }
+    li {
+      list-style-type: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .icon {
+      height: 22px;
+      width: 22px;
+      margin-right: 10px;
+      margin-left: 0;
+    }
+    .seperator {
+      border-bottom: 0.5px solid #c3a05b;
+      margin-bottom: 25px;
+    }
+  }
+</style>

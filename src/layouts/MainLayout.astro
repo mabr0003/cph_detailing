@@ -1,7 +1,8 @@
 ---
 const { title } = Astro.props;
 import "../css/general.css";
-import Navigation from "../components/Navigation.astro";
+import Navigation from "./Navigation.astro";
+import Img_slider from "./Img_slider.astro";
 ---
 
 <html lang="da">
@@ -13,8 +14,8 @@ import Navigation from "../components/Navigation.astro";
     <title>{title}</title>
   </head>
   <body>
-    <header><Navigation /></header>
-
+    <Navigation />
+    <Img_slider />
     <slot />
     <footer></footer>
   </body>
