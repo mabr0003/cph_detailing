@@ -7,22 +7,37 @@ import ImgSlider from "./Img_slider.astro";
     <div class="tekst">
       <h2>DET VI TILBYDER</h2>
       <div class="listing">
-        <img src="Vector.png" alt="" />
-        <p>Oplev vores ekspertise inden for udvendig bilrensning, der genskaber din bils glans.</p>
+        <img id="bil_icon" src="Vector1.png" alt="" />
+        <p id="first_p">
+          Oplev vores ekspertise inden for udvendig bilrensning, der genskaber
+          din bils glans.
+        </p>
       </div>
       <div class="listing">
-        <img src="Vector.png" alt="" />
-        <p>Forkæl din kabine med vores omhyggelige sæderensning og interiørpleje for en frisk og indbydende atmosfære.</p>
+        <img src="Vector2.png" alt="" />
+        <p>
+          Forkæl din kabine med vores omhyggelige sæderensning og interiørpleje
+          for en frisk og indbydende atmosfære.
+        </p>
       </div>
       <div class="listing">
-        <img src="Vector.png" alt="" />
-        <p>Vi giver dit rat og dashboard en omhyggelig behandling for at sikre, at de ser ud og føles som nye.</p>
+        <img src="Vector3.png" alt="" />
+        <p>
+          Vi giver dit rat og dashboard en omhyggelig behandling for at sikre,
+          at de ser ud og føles som nye.
+        </p>
       </div>
       <div class="listing">
-        <img src="Vector.png" alt="" />
-        <p>Få dine hjul til at skinne med vores professionelle hjulrensningstjenester, der fjerner snavs og skidt for en fornyet glans.</p>
+        <img src="Vector4.png" alt="" />
+        <p>
+          Få dine hjul til at skinne med vores professionelle
+          hjulrensningstjenester, der fjerner snavs og skidt for en fornyet
+          glans.
+        </p>
       </div>
-      <div class="btn cta_dark"><a href="/contact">KLIK HER OG LÆS MERE</a></div>
+      <div class="btn cta_dark">
+        <a href="/contact">KLIK HER OG LÆS MERE</a>
+      </div>
     </div>
     <div><ImgSlider /></div>
   </div>
@@ -46,18 +61,29 @@ import ImgSlider from "./Img_slider.astro";
     .tekst {
       padding: 0 2rem 2rem 2rem;
     }
+    #first_p {
+      margin-left: 18px;
+    }
     .listing {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
       padding: 0 10px;
-      max-width: 50ch;
+      max-width: 60ch;
+    }
+    .listing p {
+      margin-left: 30px;
+      margin-bottom: 18px;
     }
     .listing img {
-      height: 33px;
-      width: 34px;
+      height: 25px;
+      width: auto;
       padding: 0 10px;
-      margin-top: 15px;
+      margin-top: 18px;
+    }
+    #bil_icon {
+      width: auto;
+      height: 14px;
     }
   }
   @media (max-width: 600px) {
