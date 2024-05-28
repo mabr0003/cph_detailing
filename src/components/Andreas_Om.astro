@@ -1,0 +1,120 @@
+---
+
+---
+
+<article>
+  <div class="parent">
+    <div class="left_column">
+      <h1>ANDREAS BROHOLM</h1>
+      <div class="listing">
+        <p><strong>Telefon:</strong> 88 88 88 88</p>
+      </div>
+      <div class="listing">
+        <p><strong>E-mail:</strong> test@test.dk</p>
+      </div>
+      <div class="listing">
+        <p class="tider"><strong>Åbningstider:</strong></p>
+      </div>
+      <div class="listing">
+        <ul>
+          <li>Mandag: 08 – 17</li>
+          <li>Tirsdag: 08 – 17</li>
+          <li>Onsdag: 08 – 17</li>
+          <li>Torsdag: 08 – 17</li>
+          <li>Fredag: 08 – 17</li>
+        </ul>
+      </div>
+      <div class="listing">
+        <p><strong>Weekend:</strong> Efter aftale</p>
+      </div>
+      <div class="listing">
+        <p><strong>Helligdage:</strong> Efter aftale</p>
+      </div>
+      <div class="btn cta"><a href="/contact">KLIK HER OG LÆS MERE</a></div>
+    </div>
+    <div class="right_column">
+      <img src="DSC00043 1.png" alt="" />
+    </div>
+  </div>
+</article>
+
+<style>
+  @media (min-width: 600px) {
+    .parent {
+      gap: 13px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .left_column {
+      padding-top: 0rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      padding-bottom: 4rem;
+    }
+    .left_column h1 {
+      font-size: 45px;
+      margin: 0;
+    }
+    .left_column ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .tider {
+      margin-top: 70px;
+    }
+
+    .listing {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+    .right_column {
+      display: flex;
+    }
+    .right_column img {
+      width: 525px;
+      height: auto;
+    }
+  }
+  @media (max-width: 600px) {
+    .parent {
+      gap: 13px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .left_column h1 {
+      font-size: 30px;
+      margin: 0;
+    }
+    .left_column ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .tider {
+      margin-top: 5px;
+    }
+
+    .listing {
+      font-size: 20px;
+      margin-top: 5px;
+    }
+    .left_column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .right_column img {
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px 0 5px 0;
+    }
+  }
+</style>
