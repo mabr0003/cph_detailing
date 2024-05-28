@@ -10,6 +10,7 @@ img {
   height: auto;
   width: 100%;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 :root {
@@ -75,6 +76,12 @@ a {
 
 section {
   margin: 5rem 0;
+}
+
+.current_page {
+  border: 2px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
 }
 
 /*---- BUTTON -----*/
