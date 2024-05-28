@@ -5,12 +5,16 @@ import PakkeCard from "../components/PakkeCard.astro";
 import Img_slider from "../components/Img_slider.astro";
 import Text_box from "../components/Text_box.astro";
 
-const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakker?order=id", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZmR2aG1jeW9hcWRvZ3ZxZ293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1Mzg2ODcsImV4cCI6MjAzMjExNDY4N30.y9HAllaBKICo_O4VFd_a5PqpeNenzQvRYlsBkHt2Iqg",
-  },
-}).then((res) => res.json());
+const data = await fetch(
+  "https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakker?order=id",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZmR2aG1jeW9hcWRvZ3ZxZ293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1Mzg2ODcsImV4cCI6MjAzMjExNDY4N30.y9HAllaBKICo_O4VFd_a5PqpeNenzQvRYlsBkHt2Iqg",
+    },
+  }
+).then((res) => res.json());
 
 console.log(data);
 ---
@@ -20,7 +24,9 @@ console.log(data);
     <article class="hero_index">
       <div class="hero_items">
         <h1>RENERE END ALDRIG FØR</h1>
-        <p>Komplet bilpleje, der beskytter og fornyer din bils udseende og værdi!</p>
+        <p>
+          Komplet bilpleje, der beskytter og fornyer din bils udseende og værdi!
+        </p>
         <div class="btn cta"><a href="/contact">KONTAKT OS OG HØR MERE</a></div>
         <div class="btn ghost"><a href="/contact">SERVICES VI TILBYDER</a></div>
       </div>
@@ -28,15 +34,24 @@ console.log(data);
     <div class="logobar"><LogoBar /></div>
     <article class="testimonials">
       <div class="testimony">
-        <p>"Fantastisk udvendig rengøring! Bilen ser helt ny ud efter behandlingen."</p>
+        <p>
+          "Fantastisk udvendig rengøring! Bilen ser helt ny ud efter
+          behandlingen."
+        </p>
         <img src="testimony.avif" alt="testimonyicon" />
       </div>
       <div class="testimony">
-        <p>"Rat og dashboard rengøringen gjorde en stor forskel! Det føles som om jeg kører i en helt ny bil."</p>
+        <p>
+          "Rat og dashboard rengøringen gjorde en stor forskel! Det føles som om
+          jeg kører i en helt ny bil."
+        </p>
         <img src="testimony.avif" alt="testimonyicon" />
       </div>
       <div class="testimony">
-        <p>"Interiørplejen var en game changer! Kabine lugter frisk og føles som om den er blevet løftet."</p>
+        <p>
+          "Interiørplejen var en game changer! Kabine lugter frisk og føles som
+          om den er blevet løftet."
+        </p>
         <img src="testimony.avif" alt="testimonyicon" />
       </div>
     </article>
@@ -47,7 +62,10 @@ console.log(data);
       <section>
         <div class="pakker">
           <h2>PAKKELØSNINGER</h2>
-          <p>Vi tilbyder bilplejepakker i Bronze, Sølv, Guld og Platin. Vælg din perfekte pleje!</p>
+          <p>
+            Vi tilbyder bilplejepakker i Bronze, Sølv, Guld og Platin. Vælg din
+            perfekte pleje!
+          </p>
         </div>
         <article class="pakkelist">
           {
@@ -64,10 +82,18 @@ console.log(data);
 
           <div class="txt">
             <p class="om_p">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br /><br />
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. <br /><br />
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               <br />
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              <br />
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
             <div class="btn cta"><a href="/about">LÆS MERE</a></div>
           </div>
@@ -83,19 +109,27 @@ console.log(data);
           <div class="skygge">
             <img class="img1" src="/public/vector1.svg" alt="" />
             <h2>SKAL DIN BIL TIL SYN?</h2>
-            <p>Få grundig service på din bil inden bilsyn for at undgå problemer.</p>
+            <p>
+              Få grundig service på din bil inden bilsyn for at undgå problemer.
+            </p>
           </div>
 
           <div class="skygge">
             <img class="img1" src="/public/vector2.svg" alt="" />
             <h2>SKAL DIN BIL BESKYTTES?</h2>
-            <p>Vores coating beskytter din bil og det sikre, at den klarer sig gennem det meste.</p>
+            <p>
+              Vores coating beskytter din bil og det sikre, at den klarer sig
+              gennem det meste.
+            </p>
           </div>
 
           <div class="skygge">
             <img class="img1" src="/public/vector3.svg" alt="" />
             <h2>OLIE OG DÆKSKIFT?</h2>
-            <p>Vi tilbyder hurtig og effektiv olie-og dækskift til konkurrence dygtige priser.</p>
+            <p>
+              Vi tilbyder hurtig og effektiv olie-og dækskift til konkurrence
+              dygtige priser.
+            </p>
           </div>
         </div>
       </section>
@@ -231,7 +265,8 @@ console.log(data);
     margin-top: 1rem;
   }
   .img1 {
-    width: 30%;
+    width: 60px;
+    height: auto;
   }
   .skygge {
     display: flex;
@@ -242,12 +277,14 @@ console.log(data);
     border-radius: 1rem;
     padding: 4rem;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Eksempel på skygge */
+    text-align: center;
   }
 
   .container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
   }
 
   .skygge h2 {
@@ -298,6 +335,7 @@ console.log(data);
       display: flex;
       flex-direction: row;
       gap: 3rem;
+      align-items: center;
     }
 
     .nyheder_h1,
