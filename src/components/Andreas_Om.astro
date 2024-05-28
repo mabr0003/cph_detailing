@@ -2,138 +2,70 @@
 
 ---
 
-<article>
-  <div class="parent">
-    <div class="left_column">
-      <h1>ANDREAS BROHOLM</h1>
-      <div class="listing">
-        <img class="guld_ikon" src="tlf1.png" alt="" />
-        <p><strong>Telefon:</strong> +45 25 55 66 04</p>
-      </div>
-      <div class="listing">
-        <img class="guld_ikon" src="mail1.png" alt="" />
-        <p><strong>E-mail:</strong> CopenhagenDetailing@gmail.com</p>
-      </div>
-      <div class="listing">
-        <p class="tider"><strong>Åbningstider:</strong></p>
-      </div>
-      <div class="listing">
-        <ul>
-          <li>Mandag: 08 – 17</li>
-          <li>Tirsdag: 08 – 17</li>
-          <li>Onsdag: 08 – 17</li>
-          <li>Torsdag: 08 – 17</li>
-          <li>Fredag: 08 – 17</li>
-        </ul>
-      </div>
-      <div class="listing">
-        <p><strong>Weekend:</strong> Efter aftale</p>
-      </div>
-      <div class="listing">
-        <p><strong>Helligdage:</strong> Efter aftale</p>
-      </div>
-      <div class="btn cta"><a href="/contact">KLIK HER OG LÆS MERE</a></div>
+<div class="parent box_shadow scroll_animation">
+  <div class="left_column">
+    <h2>ANDREAS BROHOLM</h2>
+    <div class="listing icon">
+      <img class="guld_ikon" src="tlf1.png" alt="" />
+      <a href="tel:+45 25 55 66 04"><p>+45 25 55 66 04</p></a>
     </div>
-    <div class="right_column">
-      <img src="DSC00043 1.png" alt="" />
+    <div class="listing icon">
+      <img class="guld_ikon" src="mail1.png" alt="" />
+      <a href="mailto:CopenhagenDetailing@gmail.com"><p>CopenhagenDetailing@gmail.com</p></a>
     </div>
+    <div class="listing">
+      <p class="tider"><strong>Åbningstider:</strong></p>
+    </div>
+    <div class="listing">
+      <ul>
+        <li><p>Mandag: 08 – 17</p></li>
+        <li><p>Tirsdag: 08 – 17</p></li>
+        <li><p>Onsdag: 08 – 17</p></li>
+        <li><p>Torsdag: 08 – 17</p></li>
+        <li><p>Fredag: 08 – 17</p></li>
+      </ul>
+    </div>
+    <div class="listing">
+      <p><strong>Weekend:</strong> Efter aftale</p>
+      <p><strong>Helligdage:</strong> Efter aftale</p>
+    </div>
+    <div class="listing"></div>
   </div>
-</article>
+  <div class="right_column">
+    <img src="andreas.avif" alt="andreas" />
+  </div>
+</div>
 
 <style>
-  @media (min-width: 600px) {
-    .parent {
-      gap: 13px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    .left_column {
-      padding-top: 0rem;
-      padding-left: 4rem;
-      padding-right: 4rem;
-      padding-bottom: 4rem;
-    }
-    .left_column h1 {
-      font-size: 45px;
-      margin: 0;
-    }
-    .left_column ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .tider {
-      margin-top: 70px;
-    }
-    .guld_ikon {
-      display: flex;
-
-      width: auto;
-      height: 18px;
-      margin-right: 15px;
-      margin-top: 5px;
-    }
-
-    .listing {
-      font-size: 20px;
-      margin-top: 30px;
-      display: flex;
-    }
-    .right_column {
-      display: flex;
-    }
-    .right_column img {
-      width: 525px;
-      height: auto;
-    }
+  .left_column ul {
+    list-style-type: none;
   }
-  @media (max-width: 600px) {
-    .parent {
-      gap: 13px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    .left_column h1 {
-      font-size: 30px;
-      margin: 0;
-    }
-    .left_column ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .tider {
-      margin-top: 5px;
-    }
-    .guld_ikon {
-      display: flex;
+  .tider {
+    margin-top: 5px;
+  }
+  .guld_ikon {
+    width: auto;
+    height: 18px;
+    margin-right: 1rem;
+  }
+  .listing {
+    margin-bottom: 1rem;
+  }
 
-      width: auto;
-      height: 18px;
-      margin-right: 15px;
-      margin-top: 5px;
-    }
-    .listing {
-      font-size: 20px;
-      margin-top: 5px;
-      display: flex;
-    }
-    .left_column {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .right_column img {
-      width: 100%;
-      margin: 0 auto;
-      padding: 10px 0 5px 0;
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--contrast-color);
+  }
+
+  @media (min-width: 800px) {
+    .parent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

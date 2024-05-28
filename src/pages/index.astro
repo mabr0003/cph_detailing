@@ -45,7 +45,7 @@ console.log(data);
         <Text_box />
       </section>
       <section>
-        <div class="pakker">
+        <div class="pakker scroll_animation">
           <h2>PAKKELØSNINGER</h2>
           <p>Vi tilbyder bilplejepakker i Bronze, Sølv, Guld og Platin. Vælg din perfekte pleje!</p>
         </div>
@@ -58,7 +58,7 @@ console.log(data);
         </article>
       </section>
       <section>
-        <div class="img_container box_shadow">
+        <div class="img_container box_shadow scroll_animation">
           <h2 class="om_h1">Om Andreas</h2>
           <img class="andreas" src="andreas.avif" alt="" />
 
@@ -70,17 +70,17 @@ console.log(data);
               <br />
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-            <div class="btn cta"><a href="/about">LÆS MERE</a></div>
+            <div class="btn cta_dark"><a href="/about">LÆS MERE</a></div>
           </div>
         </div>
       </section>
       <section class="s3">
-        <div class="news">
-          <h1 class="nyheder_h1">LÆS NYHEDER HOS OS</h1>
-          <h2 class="nyheder_h2">HØR MERE OM VORES SERVICE</h2>
+        <div class="news scroll_animation">
+          <h2 class="nyheder_h1">LÆS NYHEDER HOS OS</h2>
+          <h3 class="nyheder_h2">HØR MERE OM VORES SERVICE</h3>
           <div class="btn cta_dark"><a href="/service">KLIK HER</a></div>
         </div>
-        <div class="container">
+        <div class="container scroll_animation">
           <div class="skygge">
             <img class="img1" src="/public/vector1.svg" alt="" />
             <h2>SKAL DIN BIL TIL SYN?</h2>
@@ -193,17 +193,12 @@ console.log(data);
   }
 
   .img_container {
-    background-color: var(--contrast-color);
+    /* background-color: var(--contrast-color); */
     border-radius: 15px;
   }
 
   .img_container img {
     align-self: center;
-  }
-
-  .img_container h2,
-  .img_container p {
-    color: var(--primary-background-color);
   }
 
   .txt_btn {
@@ -212,15 +207,10 @@ console.log(data);
     padding: 2rem;
   }
 
-  .om_h1 {
-    text-align: center;
-    font-size: 3rem;
-  }
   .om_p {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
   }
-
   /* om andreas slut*/
 
   .s3 {
@@ -245,22 +235,10 @@ console.log(data);
     flex-direction: column;
     gap: 20px;
     border-radius: 1rem;
-    padding: 4rem;
+    padding: 2rem;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .skygge h2 {
-    color: #000000;
-    text-align: center;
-    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .news {
@@ -302,10 +280,9 @@ console.log(data);
     /* om andreas slut*/
 
     .container {
-      display: flex;
-      flex-direction: row;
-      gap: 3rem;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 50px;
     }
 
     .nyheder_h1,

@@ -59,6 +59,7 @@ h3 {
   font-family: "din_alternatebold";
   font-size: 1.5rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 p {
@@ -74,12 +75,6 @@ a {
 
 section {
   margin: 5rem 0;
-}
-
-.box_shadow {
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  padding: 2rem;
 }
 
 /*---- BUTTON -----*/
@@ -144,4 +139,21 @@ section {
   .ghost:hover a {
     color: var(--contrast-color);
   }
+
+  .box_shadow {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+  }
+}
+
+/*----- ANIMATION -----*/
+
+.scroll_animation {
+  opacity: 0;
+  transition: 1.8s;
+}
+
+.fade_in {
+  opacity: 1;
 }
