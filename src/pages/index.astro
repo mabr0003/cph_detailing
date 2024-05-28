@@ -58,8 +58,8 @@ console.log(data);
         </article>
       </section>
       <section>
-        <div class="img_container">
-          <h1 class="om_h1">Om Andreas</h1>
+        <div class="img_container box_shadow">
+          <h2 class="om_h1">Om Andreas</h2>
           <img class="andreas" src="andreas.avif" alt="" />
 
           <div class="txt">
@@ -194,11 +194,14 @@ console.log(data);
 
   .img_container {
     background-color: var(--contrast-color);
-    padding: 1rem;
     border-radius: 15px;
   }
 
-  .img_container h1,
+  .img_container img {
+    align-self: center;
+  }
+
+  .img_container h2,
   .img_container p {
     color: var(--primary-background-color);
   }
@@ -243,7 +246,7 @@ console.log(data);
     gap: 20px;
     border-radius: 1rem;
     padding: 4rem;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Eksempel på skygge */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
 
@@ -283,7 +286,7 @@ console.log(data);
       grid-row: 1/2;
     }
 
-    .img_container h1 {
+    .img_container h2 {
       text-align: left;
       grid-row: 1/2;
       grid-column: 1/2;

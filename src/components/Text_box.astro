@@ -3,43 +3,30 @@ import ImgSlider from "./Img_slider.astro";
 ---
 
 <article>
-  <div class="parent">
+  <div class="parent box_shadow">
     <div class="tekst">
       <h2>DET VI TILBYDER</h2>
       <div class="listing">
         <img id="bil_icon" src="Vector1.png" alt="" />
-        <p id="first_p">
-          Oplev vores ekspertise inden for udvendig bilrensning, der genskaber
-          din bils glans.
-        </p>
+        <p id="first_p">Oplev vores ekspertise inden for udvendig bilrensning, der genskaber din bils glans.</p>
       </div>
       <div class="listing">
         <img src="Vector2.png" alt="" />
-        <p>
-          Forkæl din kabine med vores omhyggelige sæderensning og interiørpleje
-          for en frisk og indbydende atmosfære.
-        </p>
+        <p>Forkæl din kabine med vores omhyggelige sæderensning og interiørpleje for en frisk og indbydende atmosfære.</p>
       </div>
       <div class="listing">
         <img src="Vector3.png" alt="" />
-        <p>
-          Vi giver dit rat og dashboard en omhyggelig behandling for at sikre,
-          at de ser ud og føles som nye.
-        </p>
+        <p>Vi giver dit rat og dashboard en omhyggelig behandling for at sikre, at de ser ud og føles som nye.</p>
       </div>
       <div class="listing">
         <img src="Vector4.png" alt="" />
-        <p>
-          Få dine hjul til at skinne med vores professionelle
-          hjulrensningstjenester, der fjerner snavs og skidt for en fornyet
-          glans.
-        </p>
+        <p>Få dine hjul til at skinne med vores professionelle hjulrensningstjenester, der fjerner snavs og skidt for en fornyet glans.</p>
       </div>
       <div class="btn cta_dark">
         <a href="/contact">KLIK HER OG LÆS MERE</a>
       </div>
     </div>
-    <div><ImgSlider /></div>
+    <div class="slider"><ImgSlider /></div>
   </div>
 </article>
 
@@ -84,6 +71,10 @@ import ImgSlider from "./Img_slider.astro";
     #bil_icon {
       width: auto;
       height: 14px;
+    }
+
+    .slider {
+      align-self: center;
     }
   }
   @media (max-width: 600px) {

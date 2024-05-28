@@ -21,7 +21,7 @@ const { data } = Astro.props;
 
 <SingleViewLayout title={data.pakke}>
   <main>
-    <section class="pakkeview">
+    <article class="pakkeview">
       <article>
         <BackButton />
         <h1>{data.pakke}pakken</h1>
@@ -40,7 +40,7 @@ const { data } = Astro.props;
         </div>
         <img src="/pakkeimg.avif" alt="pakke" />
       </article>
-    </section>
+    </article>
   </main>
 </SingleViewLayout>
 
