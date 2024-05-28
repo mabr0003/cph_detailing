@@ -1,69 +1,49 @@
 ---
-
+import ImgSlider from "./Img_slider.astro";
 ---
 
 <article>
   <div class="parent">
     <div class="tekst">
-      <h1>DET VI TILBYDER</h1>
+      <h2>DET VI TILBYDER</h2>
       <div class="listing">
         <img src="Vector.png" alt="" />
-        <p>
-          Oplev vores ekspertise inden for udvendig bilrensning, der genskaber
-          din bils glans.
-        </p>
+        <p>Oplev vores ekspertise inden for udvendig bilrensning, der genskaber din bils glans.</p>
       </div>
       <div class="listing">
         <img src="Vector.png" alt="" />
-        <p>
-          Forkæl din kabine med vores omhyggelige sæderensning og interiørpleje
-          for en frisk og indbydende atmosfære.
-        </p>
+        <p>Forkæl din kabine med vores omhyggelige sæderensning og interiørpleje for en frisk og indbydende atmosfære.</p>
       </div>
       <div class="listing">
         <img src="Vector.png" alt="" />
-        <p>
-          Vi giver dit rat og dashboard en omhyggelig behandling for at sikre,
-          at de ser ud og føles som nye.
-        </p>
+        <p>Vi giver dit rat og dashboard en omhyggelig behandling for at sikre, at de ser ud og føles som nye.</p>
       </div>
       <div class="listing">
         <img src="Vector.png" alt="" />
-        <p>
-          Få dine hjul til at skinne med vores professionelle
-          hjulrensningstjenester, der fjerner snavs og skidt for en fornyet
-          glans.
-        </p>
+        <p>Få dine hjul til at skinne med vores professionelle hjulrensningstjenester, der fjerner snavs og skidt for en fornyet glans.</p>
       </div>
-      <div class="btn cta"><a href="/contact">KLIK HER OG LÆS MERE</a></div>
+      <div class="btn cta_dark"><a href="/contact">KLIK HER OG LÆS MERE</a></div>
     </div>
-    <div>
-      <img src="Screenshot 2024-05-09 at 12.14.29.png" alt="" />
-    </div>
+    <div><ImgSlider /></div>
   </div>
 </article>
 
 <style>
+  .btn {
+    margin-left: 2.5rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
   @media (min-width: 600px) {
     .parent {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      max-width: 1400px;
     }
-    h1 {
-      font-size: 50px;
-      padding-bottom: 60px;
-      margin: 0;
-    }
-    p {
-      font-size: 14px;
-      margin-left: 22px;
-    }
+
     .tekst {
-      width: 75%;
       padding: 0 2rem 2rem 2rem;
     }
     .listing {
@@ -86,9 +66,7 @@
       margin: 2rem;
       max-width: 70ch;
     }
-    h1 {
-      margin-left: 30px;
-    }
+
     img {
       height: 33px;
       width: 34px;

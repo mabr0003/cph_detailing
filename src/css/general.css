@@ -69,6 +69,10 @@ a {
   font-family: "din_alternatebold";
 }
 
+section {
+  margin-bottom: 5rem;
+}
+
 /*---- BUTTON -----*/
 .btn {
   display: inline-block;
@@ -84,9 +88,20 @@ a {
   border: 1px solid var(--accent-color);
   transition: 0.5s;
 }
+
 .cta a {
   color: var(--contrast-color);
   transition: 0.5s;
+}
+
+.cta_dark {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transition: 0.5s;
+}
+
+.cta_dark a {
+  color: var(--contrast-color);
 }
 
 .ghost {
@@ -107,6 +122,11 @@ a {
   .cta:hover a {
     color: var(--primary-background-color);
   }
+
+  .cta_dark:hover {
+    background-color: transparent;
+  }
+
   .ghost:hover {
     background-color: var(--accent-color);
     border: 1px solid var(--accent-color);

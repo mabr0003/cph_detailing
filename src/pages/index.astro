@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import LogoBar from "../components/LogoBar.astro";
 import PakkeCard from "../components/PakkeCard.astro";
 import Img_slider from "../components/Img_slider.astro";
+import Text_box from "../components/Text_box.astro";
 
 const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakker?order=id", {
   method: "GET",
@@ -16,14 +17,14 @@ console.log(data);
 
 <MainLayout title="Copenhagen Detailing">
   <main>
-    <section class="hero_index">
+    <article class="hero_index">
       <div class="hero_items">
         <h1>RENERE END ALDRIG FØR</h1>
         <p>Komplet bilpleje, der beskytter og fornyer din bils udseende og værdi!</p>
-        <div class="hero_cta btn cta"><a href="/contact">KONTAKT OS OG HØR MERE</a></div>
-        <div class="hero_ghost btn ghost"><a href="/contact">SERVICES VI TILBYDER</a></div>
+        <div class="btn cta"><a href="/contact">KONTAKT OS OG HØR MERE</a></div>
+        <div class="btn ghost"><a href="/contact">SERVICES VI TILBYDER</a></div>
       </div>
-    </section>
+    </article>
     <div class="logobar"><LogoBar /></div>
     <article class="testimonials">
       <div class="testimony">
@@ -41,6 +42,9 @@ console.log(data);
     </article>
     <div class="max_width">
       <section>
+        <Text_box />
+      </section>
+      <section>
         <div class="pakker">
           <h2>PAKKELØSNINGER</h2>
           <p>Vi tilbyder bilplejepakker i Bronze, Sølv, Guld og Platin. Vælg din perfekte pleje!</p>
@@ -53,51 +57,51 @@ console.log(data);
           }
         </article>
       </section>
+      <section>
+        <div class="img_container">
+          <h1 class="om_h1">Om Andreas</h1>
+          <img class="andreas" src="andreas.avif" alt="" />
+
+          <div class="txt">
+            <p class="om_p">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br /><br />
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+              <br />
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <div class="btn cta"><a href="/about">LÆS MERE</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="s3">
+        <div class="news">
+          <h1 class="nyheder_h1">LÆS NYHEDER HOS OS</h1>
+          <h2 class="nyheder_h2">HØR MERE OM VORES SERVICE</h2>
+          <div class="btn cta_dark"><a href="/service">KLIK HER</a></div>
+        </div>
+        <div class="container">
+          <div class="skygge">
+            <img class="img1" src="/public/vector1.svg" alt="" />
+            <h2>SKAL DIN BIL TIL SYN?</h2>
+            <p>Få grundig service på din bil inden bilsyn for at undgå problemer.</p>
+          </div>
+
+          <div class="skygge">
+            <img class="img1" src="/public/vector2.svg" alt="" />
+            <h2>SKAL DIN BIL BESKYTTES?</h2>
+            <p>Vores coating beskytter din bil og det sikre, at den klarer sig gennem det meste.</p>
+          </div>
+
+          <div class="skygge">
+            <img class="img1" src="/public/vector3.svg" alt="" />
+            <h2>OLIE OG DÆKSKIFT?</h2>
+            <p>Vi tilbyder hurtig og effektiv olie-og dækskift til konkurrence dygtige priser.</p>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 </MainLayout>
-<section>
-  <div class="img_container">
-    <h1 class="om_h1">Om Andreas</h1>
-    <img class="andreas" src="/public/andreas.avif" alt="" />
-
-    <div class="txt">
-      <p class="om_p">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br /><br />
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
-        <br />
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      </p>
-    </div>
-    <div class="btn2"><a href="">LÆS MERE</a></div>
-  </div>
-</section>
-<section class="s3">
-  <div>
-    <h1 class="nyheder_h1">LÆS NYHEDER HOS OS</h1>
-    <h2 class="nyheder_h2">HØR MERE OM VORES SERVICE</h2>
-    <div class="btn">KLIK HER<a href=""></a></div>
-  </div>
-  <div class="container">
-    <div class="skygge">
-      <img class="img1" src="/public/vector1.svg" alt="" />
-      <h2>SKAL DIN BIL TIL SYN?</h2>
-      <p>Få grundig service på din bil inden bilsyn for at undgå problemer.</p>
-    </div>
-
-    <div class="skygge">
-      <img class="img1" src="/public/vector2.svg" alt="" />
-      <h2>SKAL DIN BIL BESKYTTES?</h2>
-      <p>Vores coating beskytter din bil og det sikre, at den klarer sig gennem det meste.</p>
-    </div>
-
-    <div class="skygge">
-      <img class="img1" src="/public/vector3.svg" alt="" />
-      <h2>OLIE OG DÆKSKIFT?</h2>
-      <p>Vi tilbyder hurtig og effektiv olie-og dækskift til konkurrence dygtige priser.</p>
-    </div>
-  </div>
-</section>
 
 <style>
   .hero_index {
@@ -184,6 +188,121 @@ console.log(data);
       grid-template-columns: 1fr 1fr 1fr 1fr;
       max-width: 1000px;
       margin: auto;
+    }
+  }
+
+  .img_container {
+    background-color: var(--contrast-color);
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .img_container h1,
+  .img_container p {
+    color: var(--primary-background-color);
+  }
+
+  .txt_btn {
+    background-color: var(--contrast-color);
+    color: #ffffff;
+    padding: 2rem;
+  }
+
+  .om_h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .om_p {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  /* om andreas slut*/
+
+  .s3 {
+    padding: 2rem;
+  }
+
+  .nyheder_h1 {
+    font-size: 3rem;
+  }
+  .nyheder_h2 {
+    color: #000000;
+    margin-top: 1rem;
+  }
+  .img1 {
+    width: 30%;
+  }
+  .skygge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 1rem;
+    padding: 4rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Eksempel på skygge */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .skygge h2 {
+    color: #000000;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .news > div {
+    text-align: center;
+    max-width: 200px;
+    margin: 2rem auto;
+  }
+  @media (min-width: 800px) {
+    .img_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 2rem;
+      gap: 20px;
+    }
+
+    .img_container img {
+      grid-row: 1/2;
+    }
+
+    .img_container h1 {
+      text-align: left;
+      grid-row: 1/2;
+      grid-column: 1/2;
+      font-size: 3rem;
+    }
+
+    .txt {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      margin-top: 2rem;
+    }
+
+    /* om andreas slut*/
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+    }
+
+    .nyheder_h1,
+    .nyheder_h2 {
+      text-align: center;
     }
   }
 </style>
