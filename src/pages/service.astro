@@ -2,8 +2,17 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import LogoBar from "../components/LogoBar.astro";
 import DropDown from "../components/DropDown.astro";
+import ServiceBox from "../components/Service_box.astro";
+import PakkeCardService from "../components/PakkeCardService.astro";
 
 const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/services?order=id", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZmR2aG1jeW9hcWRvZ3ZxZ293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1Mzg2ODcsImV4cCI6MjAzMjExNDY4N30.y9HAllaBKICo_O4VFd_a5PqpeNenzQvRYlsBkHt2Iqg",
+  },
+}).then((res) => res.json());
+
+const datapakke = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/pakker?order=id", {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZmR2aG1jeW9hcWRvZ3ZxZ293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1Mzg2ODcsImV4cCI6MjAzMjExNDY4N30.y9HAllaBKICo_O4VFd_a5PqpeNenzQvRYlsBkHt2Iqg",
@@ -22,13 +31,34 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/servi
     </article>
     <LogoBar />
     <div class="max_width">
-      <article class="servicelist">
-        {
-          data.map((service) => {
-            return <DropDown data={service} />;
-          })
-        }
-      </article>
+      <section>
+        <ServiceBox />
+      </section>
+
+      <section>
+        <div class="pakker">
+          <h2>PAKKELØSNINGER</h2>
+          <p>Vi tilbyder bilplejepakker i Bronze, Sølv, Guld og Platin. Vælg din perfekte pleje!</p>
+        </div>
+        <article class="pakkelist">
+          {
+            datapakke.map((pakke) => {
+              return <PakkeCardService datapakke={pakke} />;
+            })
+          }
+        </article>
+      </section>
+
+      <section>
+        <h2>SEPARATE SERVICES</h2>
+        <article class="servicelist">
+          {
+            data.map((service) => {
+              return <DropDown data={service} />;
+            })
+          }
+        </article>
+      </section>
     </div>
   </main>
 </MainLayout>
@@ -59,6 +89,18 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/servi
     display: none;
   }
 
+  .pakkelist {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .pakker {
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: 800px) {
     .hero_index p {
       display: block;
@@ -71,6 +113,12 @@ const data = await fetch("https://cpfdvhmcyoaqdogvqgow.supabase.co/rest/v1/servi
 
     .hero_items {
       grid-column: 2/3;
+    }
+
+    .pakkelist {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-width: 1000px;
+      margin: auto;
     }
   }
 </style>

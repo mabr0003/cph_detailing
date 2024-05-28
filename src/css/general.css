@@ -52,6 +52,7 @@ h1 {
 h2 {
   font-family: "din_alternatebold";
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 h3 {
   font-family: "din_alternatebold";
@@ -62,6 +63,7 @@ h3 {
 p {
   font-family: "latoregular";
   font-size: 1.2rem;
+  line-height: 28px;
 }
 
 a {
@@ -70,7 +72,7 @@ a {
 }
 
 section {
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 /*---- BUTTON -----*/

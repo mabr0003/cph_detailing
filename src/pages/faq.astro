@@ -22,13 +22,23 @@ console.log(data);
       </div>
     </article>
     <LogoBar />
-    <article class="faqlist">
-      {
-        data.map((question) => {
-          return <FaqDropDown data={question} />;
-        })
-      }
-    </article>
+
+    <div class="max_width">
+      <section>
+        <h2>VORES OFTEST STILLEDE SPØRGSMÅL</h2>
+        <article class="faqlist">
+          {
+            data.map((question) => {
+              return <FaqDropDown data={question} />;
+            })
+          }
+        </article>
+      </section>
+      <section class="manglersvar">
+        <h2>MANGLER DU STADIG SVAR?</h2>
+        <div class="btn cta_dark"><a href="/contact">KONAKT OS NU</a></div>
+      </section>
+    </div>
   </main>
 </MainLayout>
 
@@ -68,6 +78,10 @@ console.log(data);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .manglersvar {
+    text-align: center;
   }
   @media (min-width: 800px) {
     .hero_index p {

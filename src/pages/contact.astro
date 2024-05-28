@@ -12,7 +12,19 @@ import LogoBar from "../components/LogoBar.astro";
       </div>
     </article>
     <LogoBar />
-    <div class="max_width"></div>
+    <div class="max_width">
+      <section class="s1">
+        <h1 class="find_h1">FIND OS HER!</h1>
+
+        <div class="container">
+          <div class="icn_adr">
+            <img class="icn" src="/public/vector4.svg" alt="" />
+            <div class="adr"><a href="https://www.google.com/maps/place/Aved%C3%B8reholmen+68,+2650+Hvidovre/@55.6114216,12.4641239,17z/data=!3m1!4b1!4m6!3m5!1s0x465255d303d90647:0x7c9d05c750540e2d!8m2!3d55.6114216!4d12.4666988!16s%2Fg%2F11bw426261?entry=ttu">Avedøreholmen 68, 2650 Hvidovre</a></div>
+          </div>
+          <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.459230576489!2d12.46412387720055!3d55.611424602871296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465255d303d90647%3A0x7c9d05c750540e2d!2sAved%C3%B8reholmen%2068%2C%202650%20Hvidovre!5e0!3m2!1sen!2sdk!4v1716798348544!5m2!1sen!2sdk" width="400" height="650" style="border:0;" allowfullscreen="n" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+      </section>
+    </div>
   </main>
 </MainLayout>
 
@@ -39,26 +51,6 @@ import LogoBar from "../components/LogoBar.astro";
     display: none;
   }
 
-  @media (min-width: 800px) {
-    .hero_index p {
-      display: block;
-      margin: 1rem 0;
-    }
-  }
-</style>
-<section class="s1">
-  <h1 class="find_h1">FIND OS HER!</h1>
-
-  <div class="container">
-    <div class="icn_adr">
-      <img class="icn" src="/public/vector4.svg" alt="" />
-      <div class="adr">Avedøreholmen 68, 2650 Hvidovre</div>
-    </div>
-    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.459230576489!2d12.46412387720055!3d55.611424602871296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465255d303d90647%3A0x7c9d05c750540e2d!2sAved%C3%B8reholmen%2068%2C%202650%20Hvidovre!5e0!3m2!1sen!2sdk!4v1716798348544!5m2!1sen!2sdk" width="400" height="650" style="border:0;" allowfullscreen="n" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-  </div>
-</section>
-
-<style>
   .container {
     display: flex;
     flex-direction: column;
@@ -94,7 +86,13 @@ import LogoBar from "../components/LogoBar.astro";
   iframe {
     width: 100%;
   }
+
   @media (min-width: 800px) {
+    .hero_index p {
+      display: block;
+      margin: 1rem 0;
+    }
+
     .map iframe {
     }
     .map {
