@@ -23,12 +23,3 @@ function animation() {
     }
   });
 }
-
-// const links = document.querySelectorAll(".menu li a");
-// const currentUrl = window.location.pathname;
-
-// links.forEach((link) => {
-//   if (link.getAttribute("href") === currentUrl) {
-//     link.classList.add("current_page");
-//   }
-// });
